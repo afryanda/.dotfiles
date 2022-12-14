@@ -1,0 +1,24 @@
+#! /bin/sh
+~/.config/polybar/launch.sh &
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor -d art web code docs mus chat vid
+
+bspc config border_width         0
+bspc config window_gap          12
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Brave-browser desktop=web
+bspc rule -a Java desktop=code state=floating
+bspc rule -a Telegram-desktop desktop=chat
+bspc rule -a "Genymotion Player" desktop=code state=floating
+bspc rule -a "Microsoft Teams - Preview" desktop=vid
+bspc rule -a Google-chrome state=floating
+bspc rule -a Alacritty state=floating
+bspc rule -a Thunar state=floating
+
+bspc rule -a Pavucontrol state=floating rectangle=733x503+1162+68
+bspc rule -a Blueman-manager state=floating
