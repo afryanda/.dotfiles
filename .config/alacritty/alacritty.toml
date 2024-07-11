@@ -1,0 +1,10 @@
+import = ["~/.config/alacritty/themes/tokyonight_moon.toml"]
+
+live_config_reload = true
+
+window.opacity = 0.9
+window.padding = { x = 15, y = 15 }
+
+font.size = 8
+font.normal = { family = "CaskaydiaCove Nerd Font"}
+
